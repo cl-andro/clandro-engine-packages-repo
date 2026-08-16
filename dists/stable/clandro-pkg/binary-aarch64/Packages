@@ -3848,10 +3848,10 @@ Breaks: python2 (<= 2.7.15), python-dev
 Replaces: python-dev
 Provides: python3
 Filename: pool/clandro-pkg/python_3.13.13-1_aarch64.deb
-Size: 4548496
-MD5sum: da7db6dd93f0c605083e1559ebac83ff
-SHA1: 354009cd72ec2c564305702a20aaa85c4ef4b751
-SHA256: b7310adfb30755bdaedd6187a06f5b3c35d2f9c2834cd8105a62b342604fa2df
+Size: 4545808
+MD5sum: b7e30134981493d95b383c3378bed54f
+SHA1: 99f18ca39a137da3a8fda032de3e6664b66089b7
+SHA256: 86470024aec302d1e54292c15a3533d2cdfb2c34c318d3f19238c4a46f05ae91
 Homepage: https://python.org/
 Description: Python 3 programming language intended to enable clear programs
 
@@ -3865,9 +3865,9 @@ Breaks: python (<< 3.11.1-3)
 Replaces: python (<< 3.11.1-3)
 Filename: pool/clandro-pkg/python-ensurepip-wheels_3.13.13-1_all.deb
 Size: 1713280
-MD5sum: bf58e8c364281471dd9e48e3e8cac8ee
-SHA1: acf014481c49049f701d4e6cf9ae0c23d47f6f54
-SHA256: aa457d72d351d3bf6e5fdfa268eb031c7abf30a8c85c80bd04678ffd3ffb407a
+MD5sum: 703d62b6403492a9bac4546e06256777
+SHA1: c1de1a7a825de3e46da0ac2195b4796cd0fae0bb
+SHA256: 83c410243cd8ea8e924c1758a8dd94c0934c8ea544577cf47e95b106f28101e2
 Homepage: https://python.org/
 Description: Wheels for Python ensurepip
 
@@ -3878,10 +3878,10 @@ Maintainer: Yaksh Bariya <thunder-coding@termux.dev> & @clandro
 Installed-Size: 49752
 Depends: python (= 3.13.13-1)
 Filename: pool/clandro-pkg/python-static_3.13.13-1_aarch64.deb
-Size: 7288072
-MD5sum: 1d9071d8ee8d61c3f27980c346c5d8d6
-SHA1: 3e3154128292af3dc28f6100b07afe332dfb18ea
-SHA256: 5c77f2536e1276f775ba158bf152689e4a6431e317879f3c6d0687c898b40c2a
+Size: 7295924
+MD5sum: 786d72124f71c0ae48fa9fc529432d52
+SHA1: 08087b54bf75397f2f40877461e52d03de224ebc
+SHA256: 381ff2c7778b0ddf46d2e6b4b256c384a94b06dbd3a35f889555df1a62ccfe82
 Homepage: https://python.org/
 Description: Static libraries for python
 
@@ -3894,10 +3894,10 @@ Depends: tcl, tk, python (= 3.13.13-1)
 Breaks: python (<< 3.11.1-3)
 Replaces: python (<< 3.11.1-3)
 Filename: pool/clandro-pkg/python-tkinter_3.13.13-1_aarch64.deb
-Size: 506180
-MD5sum: a57f0cd7d522218d44b94512f5165547
-SHA1: 2f1c98267162338f409f2c2db494b5bb4990f15a
-SHA256: 9a44ccbb21a2d509340eff989947801111a625a8d5e7cc4c480f94e36e1a2b28
+Size: 506176
+MD5sum: dfed2ab2c5921a6f89a1f6df71ec7caa
+SHA1: 90e3520b5f41a3388ff5182e2a1594a7cffc0d49
+SHA256: d4f525705fe649b0e8fbd5ecc3f75544d9e2b8631501d99c9317081a8f08e70e
 Homepage: https://python.org/
 Description: Tkinter support for Python 3
 
