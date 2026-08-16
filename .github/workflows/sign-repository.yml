@@ -1,0 +1,137 @@
+name: Sign Package Repository
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'pool/b2b/*.deb'
+      - 'pool/clandro-pkg/*.deb'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sign-repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install APT Utilities
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq dpkg-dev gnupg gzip xz-utils
+
+      - name: Import GPG Private Key
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          if [ -z "$GPG_PRIVATE_KEY" ]; then
+            echo "::error::GPG_PRIVATE_KEY secret is not configured in the repository settings."
+            exit 1
+          fi
+          mkdir -p ~/.gnupg
+          chmod 700 ~/.gnupg
+          echo "allow-loopback-pinentry" > ~/.gnupg/gpg-agent.conf
+          chmod 600 ~/.gnupg/gpg-agent.conf
+          echo "batch" > ~/.gnupg/gpg.conf
+          echo "pinentry-mode loopback" >> ~/.gnupg/gpg.conf
+          chmod 600 ~/.gnupg/gpg.conf
+          gpgconf --kill gpg-agent
+          gpg-connect-agent reloadagent /bye
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          echo "GPG key imported successfully."
+
+      - name: Generate Package Indexes
+        run: |
+          for comp in b2b clandro-pkg; do
+            echo "Scanning pool/$comp/ directory..."
+            mkdir -p dists/stable/$comp/binary-aarch64
+            
+            # Generate base Packages file
+            dpkg-scanpackages -m pool/$comp > dists/stable/$comp/binary-aarch64/Packages
+            
+            # Compress packages index for APT compatibilities
+            gzip -9cf dists/stable/$comp/binary-aarch64/Packages > dists/stable/$comp/binary-aarch64/Packages.gz
+            xz -9cf dists/stable/$comp/binary-aarch64/Packages > dists/stable/$comp/binary-aarch64/Packages.xz
+          done
+          echo "Package indexes generated."
+
+      - name: Generate Release File
+        run: |
+          echo "Creating Release manifest..."
+          cat <<EOF > dists/stable/Release
+          Origin: clandro-engine-packages-repo
+          Label: clandro-engine-packages-repo
+          Suite: stable
+          Codename: stable
+          Architectures: aarch64
+          Components: b2b clandro-pkg
+          Description: Secure Custom Package Repository for OpsPulse
+          Date: $(date -Ru)
+          EOF
+
+          # Append MD5 and SHA256 checksum hashes of files
+          echo "MD5Sum:" >> dists/stable/Release
+          for comp in b2b clandro-pkg; do
+            for f in $comp/binary-aarch64/Packages $comp/binary-aarch64/Packages.gz $comp/binary-aarch64/Packages.xz; do
+                if [ -f "dists/stable/$f" ]; then
+                    size=$(wc -c < "dists/stable/$f" | xargs)
+                    md5=$(md5sum "dists/stable/$f" | cut -d' ' -f1)
+                    echo " $md5 $size $f" >> dists/stable/Release
+                fi
+            done
+          done
+
+          echo "SHA256:" >> dists/stable/Release
+          for comp in b2b clandro-pkg; do
+            for f in $comp/binary-aarch64/Packages $comp/binary-aarch64/Packages.gz $comp/binary-aarch64/Packages.xz; do
+                if [ -f "dists/stable/$f" ]; then
+                    size=$(wc -c < "dists/stable/$f" | xargs)
+                    sha256=$(sha256sum "dists/stable/$f" | cut -d' ' -f1)
+                    echo " $sha256 $size $f" >> dists/stable/Release
+                fi
+            done
+          done
+          echo "Release manifest created successfully."
+
+      - name: Sign Release Manifest
+        env:
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          # Automatically detect key ID from imported private keys
+          GPG_KEY_ID=$(gpg --list-secret-keys --with-colons | grep '^sec' | tail -n 1 | cut -d: -f5)
+          if [ -z "$GPG_KEY_ID" ]; then
+            echo "::error::GPG key ID could not be identified from imported private keyring."
+            exit 1
+          fi
+          
+          echo "Signing Release with Key ID: $GPG_KEY_ID..."
+          # Clearsigned Release (InRelease)
+          gpg --batch --no-tty --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" --default-key "$GPG_KEY_ID" --clearsign --digest-algo SHA256 --yes --output dists/stable/InRelease dists/stable/Release
+          
+          # Detached signature (Release.gpg)
+          gpg --batch --no-tty --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" --default-key "$GPG_KEY_ID" --detach-sign --armor --digest-algo SHA256 --yes --output dists/stable/Release.gpg dists/stable/Release
+          
+          # Export public key inside root for verification checks
+          gpg --yes --output cl-andro.gpg --export "$GPG_KEY_ID"
+          echo "Repository signature files created."
+
+      - name: Commit and Push signed files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dists/stable/Release dists/stable/InRelease dists/stable/Release.gpg dists/stable/b2b/binary-aarch64/Packages* dists/stable/clandro-pkg/binary-aarch64/Packages* cl-andro.gpg
+          
+          if ! git diff-index --quiet HEAD --; then
+            echo "Commiting signed indexes and release signatures..."
+            git commit -m "Auto-sign repository indices and generate Release GPG signatures [CI]"
+            git push origin main
+            echo "Successfully updated signed repository indexes!"
+          else
+            echo "No updates or differences found. Repository indices are already signed."
+          fi
