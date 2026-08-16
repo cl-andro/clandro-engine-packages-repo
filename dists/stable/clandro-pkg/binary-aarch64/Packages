@@ -105,6 +105,47 @@ SHA256: d1c30f3341efb7941ed72d3046f388d2f644bf60c6b2a512763f28e310c93c4b
 Homepage: https://packages.debian.org/apt
 Description: APT transport for anonymous package downloads via Tor
 
+Package: argp
+Version: 1.5.0-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 108
+Filename: pool/clandro-pkg/argp_1.5.0-1_aarch64.deb
+Size: 21284
+MD5sum: 19aa18bd9a32cadd59249a20f69e616a
+SHA1: 23dcf8d36d19f226c1e39c12cd343d43cc058310
+SHA256: 3cae1c5a54fbe113168885e012acbd5fdf8ed12fda3b8b389d6450222ce603a1
+Homepage: https://github.com/argp-standalone/argp-standalone
+Description: Standalone version of arguments parsing functions from GLIBC
+
+Package: argp-static
+Version: 1.5.0-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 200
+Depends: argp (= 1.5.0-1)
+Filename: pool/clandro-pkg/argp-static_1.5.0-1_aarch64.deb
+Size: 42116
+MD5sum: 4cfbd07f9b2d7fe1fe992c5b21016406
+SHA1: 632fadfa478f1ed43e4a4c894d5375fca69e60a2
+SHA256: a85e57437cf373701010990898d5e731f1115617a653760ee7e116205575a447
+Homepage: https://github.com/argp-standalone/argp-standalone
+Description: Static libraries for argp
+
+Package: aria2
+Version: 1.37.0-3
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 2696
+Depends: libc++, c-ares, openssl, libxml2, zlib
+Filename: pool/clandro-pkg/aria2_1.37.0-3_aarch64.deb
+Size: 679960
+MD5sum: 3940d00e0bc300d3a01150348ff86fec
+SHA1: c868059cf3726a8158c87adfe4f725e684605b62
+SHA256: 91c188b97584ad9a9e14c18b1aabbb04cb17db83acf2b6d8b3adaee0e76d0a7e
+Homepage: https://aria2.github.io
+Description: Download utility supporting HTTP/HTTPS, FTP, BitTorrent and Metalink
+
 Package: attr
 Version: 2.5.2-1
 Architecture: aarch64
@@ -196,6 +237,20 @@ SHA1: 64432677b90a79edc261c85695208257aa9d13c3
 SHA256: 6cc9ac612b958ac057ffae6b38d12f311af356a92b294888f729482b780ba55a
 Homepage: https://github.com/google/brotli
 Description: lossless compression algorithm and format (command line utility)
+
+Package: bsdtar
+Version: 3.8.7
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 1500
+Depends: libarchive (= 3.8.7)
+Filename: pool/clandro-pkg/bsdtar_3.8.7_aarch64.deb
+Size: 348028
+MD5sum: d4bca7f4e203e4c40876cffb2bbe9b5b
+SHA1: 4be9c7f448947047b73838c3b310992214204c79
+SHA256: 8e51e475c0dcaa378dc7a1ce70761cd3a186e72cc25cbdd09a0b5a0f90975096
+Homepage: https://www.libarchive.org/
+Description: The tar(1) and cpio(1) programs from FreeBSD, using libarchive
 
 Package: bzip2
 Version: 1.0.8-8
@@ -608,6 +663,20 @@ SHA1: b04eeee78b7598788f5ec7edb34c8f53ff3b1e5a
 SHA256: 5dde09f88eb742e09456bf77a6b37d5dca82fa3316c0a0c7a3ca1114278880f5
 Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
 Description: Small SSH server and client
+
+Package: elfutils
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 2868
+Depends: argp, libarchive, libasm, libc++, libdebuginfod, libdw, libmicrohttpd, libsqlite, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/elfutils_0.193-1_aarch64.deb
+Size: 444864
+MD5sum: 5093a8ff3f28d5f4eb218ebfcd0856cb
+SHA1: b95ce0d258b0433621bf0b6eebbccff3eda59d02
+SHA256: 2b3f9750bfc626062fd710b09d3c47fac486e2bad1b236ee9f89aff56f25bf95
+Homepage: https://sourceware.org/elfutils/
+Description: A collection of utilities to read, create and modify ELF binary files
 
 Package: fd
 Version: 10.4.2
@@ -1082,6 +1151,35 @@ SHA256: d176fb5f0fd0f60749ffe8a69302cde09f5f8e02089412a03aeec48260cea3de
 Homepage: https://jqlang.org/
 Description: Static libraries for jq
 
+Package: json-c
+Version: 0.18-2
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 292
+Breaks: json-c-dev
+Replaces: json-c-dev
+Filename: pool/clandro-pkg/json-c_0.18-2_aarch64.deb
+Size: 50144
+MD5sum: 2489ecc67c625e5a4afd76e8c5e0eb67
+SHA1: 592f5c6a33c6af323c997fade4bb68ac12a28ba0
+SHA256: a93cadcd1787c359d40b61ef9abf2e0f6b4c68e29d6e7dd5302040e69275e265
+Homepage: https://github.com/json-c/json-c/wiki
+Description: A JSON implementation in C
+
+Package: json-c-static
+Version: 0.18-2
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 176
+Depends: json-c (= 0.18-2)
+Filename: pool/clandro-pkg/json-c-static_0.18-2_aarch64.deb
+Size: 30244
+MD5sum: 8ef835410bcc45cd777fe19a8c8bc513
+SHA1: 41299de23a23dbaf6050c93df54521e1364f952c
+SHA256: b11d748077324b70868f156c1750a991ead7402631a983f3d65c0b3b4ebb64ae
+Homepage: https://github.com/json-c/json-c/wiki
+Description: Static libraries for json-c
+
 Package: krb5
 Version: 1.22.2
 Architecture: aarch64
@@ -1354,6 +1452,64 @@ SHA256: 9830d15d1d1d11734b2ce3712770ab9637ef30d6df5f504c39ddc07f609f4be8
 Homepage: https://github.com/termux/libandroid-utimes
 Description: Static libraries for libandroid-utimes
 
+Package: libarchive
+Version: 3.8.7
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 1032
+Depends: libbz2, libiconv, liblzma, libxml2, openssl, zlib
+Breaks: libarchive-dev
+Replaces: libarchive-dev
+Filename: pool/clandro-pkg/libarchive_3.8.7_aarch64.deb
+Size: 391108
+MD5sum: 077a800e6b103b33b987f2848265072b
+SHA1: b0d2699ba9c390b4a92bb78b7f5f073324a36ba7
+SHA256: 0b4f9e34d099d43b34f02f0d32d2bb0b0f0932fad17c1cc576112298a5fa068f
+Homepage: https://www.libarchive.org/
+Description: Multi-format archive and compression library
+
+Package: libarchive-static
+Version: 3.8.7
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 2016
+Depends: libarchive (= 3.8.7)
+Filename: pool/clandro-pkg/libarchive-static_3.8.7_aarch64.deb
+Size: 359576
+MD5sum: edeeca869bcc04ca845485c9a08f98f8
+SHA1: cfd2d7cf546466d616e3b9004020040cd9ea7d06
+SHA256: 48a57109848d416ef723c63aa0ae4a4dc2d3dcd54110ce389e65f9adc330c763
+Homepage: https://www.libarchive.org/
+Description: Static libraries for libarchive
+
+Package: libasm
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 72
+Depends: libdw, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libasm_0.193-1_aarch64.deb
+Size: 13320
+MD5sum: 98acd504a3a0418b4c40ea6c485189ab
+SHA1: 8eace2b9d17f20db836986583695284330317068
+SHA256: e321334d32a67f31c07daad07b379abe11aaecad4492438efcc1788b55366b82
+Homepage: https://sourceware.org/elfutils/
+Description: Library to assemble and disassemble instructions
+
+Package: libasm-static
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 104
+Depends: libasm, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libasm-static_0.193-1_aarch64.deb
+Size: 13212
+MD5sum: ca1ce64418e8bf0db74097819742f65c
+SHA1: d667a1f11eba0ffa753b2fa68fe18d1cd74c675b
+SHA256: c4d21f33c85a7016f817d789540fe2d024db3814b74bf33521be0959f27d63ab
+Homepage: https://sourceware.org/elfutils/
+Description: Static library to assemble and disassemble instructions
+
 Package: libassuan
 Version: 3.0.2-1
 Architecture: aarch64
@@ -1565,6 +1721,48 @@ SHA256: 970d123dde43b32e0c46f01ccbe3fbd552997773e2514297cd1692d66c5f2c34
 Homepage: https://www.oracle.com/database/berkeley-db
 Description: Static libraries for libdb
 
+Package: libdebuginfod
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 152
+Depends: libcurl, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libdebuginfod_0.193-1_aarch64.deb
+Size: 20400
+MD5sum: 572f20dde1532ad2920daccfb974122e
+SHA1: 69d34fc4e9d25ed4cdac0dd3b801590270a13289
+SHA256: 12ab4ffe4611d6dcdebc03da9998d9777ffac2ad59a81a54b2658562f0c19520
+Homepage: https://sourceware.org/elfutils/
+Description: Library for debuginfod
+
+Package: libdw
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 816
+Depends: argp, libbz2, liblzma, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libdw_0.193-1_aarch64.deb
+Size: 211968
+MD5sum: 8a810bce1663adac7d13ff152b648057
+SHA1: 979c102074a68a78330b9f7db03102d70618c95a
+SHA256: afef0faaaf26adecda225b4c5cbc594f8b350d8b270f06a8d4c65e9aeee931ed
+Homepage: https://sourceware.org/elfutils/
+Description: Library to read DWARF information
+
+Package: libdw-static
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 1508
+Depends: libdw, libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libdw-static_0.193-1_aarch64.deb
+Size: 237972
+MD5sum: be089f91ca31d4e9a5735e9daf286714
+SHA1: fc774370eb6fd835de26ba82d08300a0ffd8bab3
+SHA256: c234cbbac8866f9d590ab8066302ec962a54b64f67555001ae5b0107a3c9d884
+Homepage: https://sourceware.org/elfutils/
+Description: Static library to read DWARF information
+
 Package: libedit
 Version: 20240517-3.1-1
 Architecture: aarch64
@@ -1594,6 +1792,36 @@ SHA1: 94b8fca85d705b42ccda37b497c920c95f4c8c29
 SHA256: d75e63dec02b258a932a9a23d84eeb36939736859455eaf96a3939bacb16d049
 Homepage: https://thrysoee.dk/editline/
 Description: Static libraries for libedit
+
+Package: libelf
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 372
+Depends: libandroid-support, zlib, zstd, json-c
+Conflicts: libelf-dev
+Replaces: libelf-dev
+Filename: pool/clandro-pkg/libelf_0.193-1_aarch64.deb
+Size: 66208
+MD5sum: de4d8d5a913367a6ef10da9fb0f2c268
+SHA1: 8f4368e35ee804ae65208a817500c9deff8bf55b
+SHA256: bbdc8293c7a445a470b1f5db6b673f52b06e80ed993c400d3e2bcee577be5c03
+Homepage: https://sourceware.org/elfutils/
+Description: ELF object file access library
+
+Package: libelf-static
+Version: 0.193-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 324
+Depends: libelf (= 0.193-1)
+Filename: pool/clandro-pkg/libelf-static_0.193-1_aarch64.deb
+Size: 45300
+MD5sum: f7e480ad5fb20e5dd3c4827468eab219
+SHA1: bb090988e9e694aed7a9b4546bac6e4636f0cd30
+SHA256: e6b16b3bcc4615b579dfba3d2e99b7db795d312e75e5ca895c885d8a17343eaa
+Homepage: https://sourceware.org/elfutils/
+Description: Static libraries for libelf
 
 Package: libevent
 Version: 2.1.12-3
@@ -1992,6 +2220,36 @@ SHA256: bc239db03e19a1ae2ca6812db7b5642162abb6c0ca37a7c5e25ecbf3dfd5b4d5
 Homepage: https://www.hadrons.org/software/libmd/
 Description: Static libraries for libmd
 
+Package: libmicrohttpd
+Version: 1.0.5
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 992
+Depends: libgnutls
+Breaks: libmicrohttpd-dev
+Replaces: libmicrohttpd-dev
+Filename: pool/clandro-pkg/libmicrohttpd_1.0.5_aarch64.deb
+Size: 205492
+MD5sum: 5d25be191f2c4a53884ae32de2c19657
+SHA1: 3ba7c7a711d30586314d8084d42196c2a2ca873c
+SHA256: 3b98951d0196a19659b7f05600e367325cad4f79183fa1eaf2af3e6a7c373fd6
+Homepage: http://www.gnu.org/software/libmicrohttpd/
+Description: A small C library that is supposed to make it easy to run an HTTP server as part of another application
+
+Package: libmicrohttpd-static
+Version: 1.0.5
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 312
+Depends: libmicrohttpd (= 1.0.5)
+Filename: pool/clandro-pkg/libmicrohttpd-static_1.0.5_aarch64.deb
+Size: 75332
+MD5sum: a779f389423435a85c794d18d77956a5
+SHA1: 92a2bc67d9021fef80851f89659be640cee64d4d
+SHA256: 7a2d47eeac19ed3b067be87657fcc846957d410ebd4ad22258e7622aa018c900
+Homepage: http://www.gnu.org/software/libmicrohttpd/
+Description: Static libraries for libmicrohttpd
+
 Package: libmount
 Version: 2.41.3
 Architecture: aarch64
@@ -2179,6 +2437,35 @@ SHA1: ed98e9113657dbcaf5ca480247e66624bbf92e9b
 SHA256: 735bbb99d0ec789899cd80eb9f2d02014eaf8a52e76de3c072756fc8e7fca9fe
 Homepage: https://www.gnupg.org/related_software/npth/
 Description: Static libraries for libnpth
+
+Package: libpcap
+Version: 1.10.5-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 780
+Breaks: libpcap-dev
+Replaces: libpcap-dev
+Filename: pool/clandro-pkg/libpcap_1.10.5-1_aarch64.deb
+Size: 228544
+MD5sum: c9f54ea15c5ad68719c808fab405c2cb
+SHA1: 144adc5c0971fd78b87c537a4886ac433d0d7f1c
+SHA256: a7b0e16d1656603d1adbe094cabe222a4b0a9741fb9c3cc3380ddc75bcf3b506
+Homepage: https://www.tcpdump.org
+Description: Library for network traffic capture
+
+Package: libpcap-static
+Version: 1.10.5-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 416
+Depends: libpcap (= 1.10.5-1)
+Filename: pool/clandro-pkg/libpcap-static_1.10.5-1_aarch64.deb
+Size: 101624
+MD5sum: f803c80dc1a73f4e1ee6ff53c72b293a
+SHA1: 0b300937336cdb672a66f24caf98497377050b88
+SHA256: 0d24d7fd2fbc092169efd01d7ce08c363c77a6e8572465178ff40bb8e946fe32
+Homepage: https://www.tcpdump.org
+Description: Static libraries for libpcap
 
 Package: libpng
 Version: 1.6.58
@@ -2823,6 +3110,35 @@ SHA256: 965c2d51c0c0e5e858b862f0819a0c5b4369138c1d0130e99aba9fb591a9c0d2
 Homepage: https://pyyaml.org/wiki/LibYAML
 Description: Static libraries for libyaml
 
+Package: lua54
+Version: 5.4.8-6
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 772
+Breaks: liblua-dev, liblua54
+Replaces: liblua-dev, liblua54
+Filename: pool/clandro-pkg/lua54_5.4.8-6_aarch64.deb
+Size: 140384
+MD5sum: 5f96cb532f6a079a1ad7263fc40e52e3
+SHA1: 0670810093228633af982c562f34c251df97e647
+SHA256: 29f502a85d83e27a910be076b9186412d64d2c9494347c9ddc5aa9db3d606a4a
+Homepage: https://www.lua.org/
+Description: Shared library for the Lua interpreter (v5.4.x)
+
+Package: lua54-static
+Version: 5.4.8-6
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 488
+Depends: lua54 (= 5.4.8-6)
+Filename: pool/clandro-pkg/lua54-static_5.4.8-6_aarch64.deb
+Size: 108184
+MD5sum: 0cf920e216e727daab49f56bb411b7ea
+SHA1: dea03fb11451fcdecb78817747bd0cbf3eeaaa9d
+SHA256: cec954719000c8e650faef730781888c8149b3f3bc057adb22fb4a636da0619a
+Homepage: https://www.lua.org/
+Description: Static libraries for lua54
+
 Package: luajit
 Version: 1:2.1.1774896198+g18b087c
 Architecture: aarch64
@@ -3042,6 +3358,23 @@ SHA1: 3351f0ecadeafc3ac10f9cc51217e797ea356264
 SHA256: 7ccd9fba2c40f3d285c18b785766439975a1032fac932054448803ac2b7de70d
 Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Description: Low level cryptographic tools
+
+Package: nmap
+Version: 7.99
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 27660
+Depends: libc++, lua54, libpcap, libssh2, openssl, pcre2, resolv-conf, zlib
+Breaks: nmap-ncat
+Replaces: nmap-ncat
+Provides: nc, ncat, netcat
+Filename: pool/clandro-pkg/nmap_7.99_aarch64.deb
+Size: 5106684
+MD5sum: 77fb51b63147db7811273eb84edd6b5f
+SHA1: 406b61be091b0034c2592ab7fcabeaeab3d9605f
+SHA256: fb37e24b910e1da80497535bc526c60aebcdab3c8d04906821cb61d3097a20eb
+Homepage: https://nmap.org/
+Description: Utility for network discovery and security auditing
 
 Package: nodejs
 Version: 25.8.2
@@ -3453,6 +3786,19 @@ SHA256: 8e1cdc545420653fdfea15c1c0e544e870bbf25c10447d19188069a9d1a0e702
 Homepage: https://github.com/facebook/zstd
 Description: A Pigz-like tool for Zstandard
 
+Package: rclone
+Version: 1.74.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 80684
+Filename: pool/clandro-pkg/rclone_1.74.1_aarch64.deb
+Size: 18050224
+MD5sum: 891b412a579d731b13aed0d0d47f8585
+SHA1: 051a891bbb4e18d40175edc9e8564d89ea85fdc4
+SHA256: 5d455f340323066b717c6e3b7162c5d8de351a44e6e5cf653f8abf5b4088827b
+Homepage: https://rclone.org/
+Description: rsync for cloud storage
+
 Package: readline
 Version: 8.3.3
 Architecture: aarch64
@@ -3630,6 +3976,20 @@ SHA256: 2421e17f346a4726e4c074ab59aed4de059a62896327ad28dda4b8132aa94748
 Homepage: https://serf.apache.org/
 Description: Static libraries for serf
 
+Package: socat
+Version: 1.8.1.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 712
+Depends: openssl, readline
+Filename: pool/clandro-pkg/socat_1.8.1.1_aarch64.deb
+Size: 195528
+MD5sum: 955697e0a027dad87a4ba21001a48e68
+SHA1: f69327029682992a40710cab34b111dd65f2f411
+SHA256: e2f2cc437de55a27f16bd58d75ff7bc4359cdc811da1a42bf0622029a38d00b0
+Homepage: http://www.dest-unreach.org/socat/
+Description: Relay for bidirectional data transfer between two independent data channels
+
 Package: sqlite
 Version: 3.53.1
 Architecture: aarch64
@@ -3643,6 +4003,20 @@ SHA1: a01252f3d376bd0682d225c4ebe2633a79ec63a2
 SHA256: a0fa1d6896f8dbd16d9bd71d88ff6ab8eeec8c9e095aa3bc9d48057e28a6a222
 Homepage: https://www.sqlite.org
 Description: Command line shell for SQLite
+
+Package: strace
+Version: 7.0
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 2092
+Depends: libdw
+Filename: pool/clandro-pkg/strace_7.0_aarch64.deb
+Size: 485728
+MD5sum: 6c82140448654f66479c804ca07397a1
+SHA1: 959b0d19d5c84c7824db95e2461f4084052061e8
+SHA256: 256e6a98a0eaf41e6de1d44355e80b128408643fe1579ae8b1d605b34429d368
+Homepage: https://strace.io/
+Description: Debugging utility to monitor system calls and signals received
 
 Package: subversion
 Version: 1.14.5-1
