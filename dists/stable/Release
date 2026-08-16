@@ -5,18 +5,18 @@ Codename: stable
 Architectures: aarch64
 Components: b2b clandro-pkg
 Description: Secure Custom Package Repository for OpsPulse
-Date: Sun, 16 Aug 2026 08:30:57 +0000
+Date: Sun, 16 Aug 2026 14:19:39 +0000
 MD5Sum:
  51e01dac115d75cee2ac215c3b35b9d4 100446 b2b/binary-aarch64/Packages
- fcd968045fc9e16f0c9dedc6fd119b02 32627 b2b/binary-aarch64/Packages.gz
+ 6f8952eda968d29e8d0dd7a8e599fe12 32627 b2b/binary-aarch64/Packages.gz
  81c5b8023919db6e6a7c71063ce0bc6f 28344 b2b/binary-aarch64/Packages.xz
- 44ab89a5e892bac7e619e5226079d7f2 132658 clandro-pkg/binary-aarch64/Packages
- 8fd5a11d55312fd19f13a4920e07aada 42968 clandro-pkg/binary-aarch64/Packages.gz
- 3d16c15639d2ec4c95079e3e76b5af3f 36856 clandro-pkg/binary-aarch64/Packages.xz
+ e27ac7f5a648762932b9ffca59d7fe0f 139204 clandro-pkg/binary-aarch64/Packages
+ 42b73da0390645efeaeb6b06fc8c7b9c 45287 clandro-pkg/binary-aarch64/Packages.gz
+ b2884f1ae21a3fbf8478f25cf2edc6c5 38676 clandro-pkg/binary-aarch64/Packages.xz
 SHA256:
  797297672f8de0d0b0e20a1c917343576241a6f8de9054ba74afe850c3b82b1f 100446 b2b/binary-aarch64/Packages
- 84e4420c53742059d3b4ff1c176178ae85c3c7c4533840eaf123bc5e77e21209 32627 b2b/binary-aarch64/Packages.gz
+ f6989fdee0c08260001392d1c15db83f7ae284584e3012fe7469837475b6440d 32627 b2b/binary-aarch64/Packages.gz
  cc3c51a9b73caa75627553e295c545ba22a5842fa847af50bb48e721eb32cdb6 28344 b2b/binary-aarch64/Packages.xz
- 7eb09d3f63734c23f09b4aab8c4b16e418e51465dd1680ccbd849db3af2e3bf7 132658 clandro-pkg/binary-aarch64/Packages
- e2f7eb28ab5387cef972398ebb69b3f8647101a71a6aa7271fb985482ebc818d 42968 clandro-pkg/binary-aarch64/Packages.gz
- ecdce7e849266ebe21333da3506040a2153cf7a908581cf64941606027695547 36856 clandro-pkg/binary-aarch64/Packages.xz
+ f4e07a3641ffa37e8c1980f6aad6c6bf83ed8da95b4fc88b1c5bebceed40bbf7 139204 clandro-pkg/binary-aarch64/Packages
+ a45bc8e60ed2ad7731e4d10412c1693b84ba79d45b64bb8272f98c142a7e8cee 45287 clandro-pkg/binary-aarch64/Packages.gz
+ 39f7923b5ac9375e27eaafa412daaef1b982a3cafdac6d227383406bb581998e 38676 clandro-pkg/binary-aarch64/Packages.xz

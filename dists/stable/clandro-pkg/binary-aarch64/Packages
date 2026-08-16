@@ -152,6 +152,20 @@ SHA256: b2eda2641b418106bb9b7b2ec5a11d12307fe36e96354ab80f32baa8046a93f1
 Homepage: https://www.gnu.org/software/bash/
 Description: A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)
 
+Package: bc
+Version: 1.08.2-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 252
+Depends: readline,flex
+Filename: pool/clandro-pkg/bc_1.08.2-1_aarch64.deb
+Size: 75788
+MD5sum: cd459a65e3dcc03e9413a2d4dfb99422
+SHA1: b9bf4aeba6caf39c6207d7f2e91f5366a265a3e2
+SHA256: 937f098a8e7109fbe6237c52a2bcd160fac534c054b6bd03e65cf159d6c43768
+Homepage: https://www.gnu.org/software/bc/
+Description: Arbitrary precision numeric processing language
+
 Package: blk-utils
 Version: 2.41.3
 Architecture: aarch64
@@ -595,6 +609,19 @@ SHA256: 5dde09f88eb742e09456bf77a6b37d5dca82fa3316c0a0c7a3ca1114278880f5
 Homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
 Description: Small SSH server and client
 
+Package: fd
+Version: 10.4.2
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 3240
+Filename: pool/clandro-pkg/fd_10.4.2_aarch64.deb
+Size: 952648
+MD5sum: fb2fd5c8da2a563efece4f6b638a8802
+SHA1: 5cd3ad690df263e0be54ba49b38373498be71999
+SHA256: a5dce9405fd59f52bde528049a96653e968c899b642f31eec1b0768c728e6da8
+Homepage: https://github.com/sharkdp/fd
+Description: Simple, fast and user-friendly alternative to find
+
 Package: fdisk
 Version: 2.41.3
 Architecture: aarch64
@@ -653,6 +680,50 @@ SHA1: 3ee44a1d1fa285a0cd827f81ce0bbc9797ec6be9
 SHA256: 4a96389bd69727ad8e2ee01a659ea3ba704fa51d7a1e869c81d2ed4bb6efda8d
 Homepage: https://www.gnu.org/software/findutils/
 Description: Utilities to find files meeting specified criteria and perform various actions on the files which are found
+
+Package: fish
+Version: 4.7.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 35224
+Depends: bc, libandroid-support, libc++, mandoc, ncurses, ncurses-utils, pcre2
+Filename: pool/clandro-pkg/fish_4.7.1_aarch64.deb
+Size: 6752092
+MD5sum: dd0718555176e056f9cabeab69fa24df
+SHA1: c176eac212e2a1d48ea05bc0f4241b1837c57109
+SHA256: 0ce0dbe1b586daec635eea649feda074b387657292c7401ef15a8f10143b181c
+Homepage: https://fishshell.com/
+Description: The user-friendly command line shell
+
+Package: flex
+Version: 2.6.4-4
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 908
+Depends: m4
+Conflicts: flex-dev
+Replaces: flex-dev
+Filename: pool/clandro-pkg/flex_2.6.4-4_aarch64.deb
+Size: 199720
+MD5sum: 6d293a7528b8392e2d9585dac149ab0d
+SHA1: d7484ad5975503ca0291ed68c8e5299b9567a6c2
+SHA256: fa09c73e4126d5492d97ec81ea192c4f4ea083c097a5ca2889562b701562b251
+Homepage: https://github.com/westes/flex
+Description: Fast lexical analyser generator
+
+Package: flex-static
+Version: 2.6.4-4
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 36
+Depends: flex (= 2.6.4-4)
+Filename: pool/clandro-pkg/flex-static_2.6.4-4_aarch64.deb
+Size: 1888
+MD5sum: 3f452bab6e859453334d5a2b05662a65
+SHA1: e64934453e6a18886a29484998cbb95157aea5c6
+SHA256: ec8f346485b71e2783f2aefc0ed91d90961547a34cb28489a7d0acf29983fe64
+Homepage: https://github.com/westes/flex
+Description: Static libraries for flex
 
 Package: fontconfig
 Version: 2.17.1-1
@@ -727,6 +798,21 @@ SHA1: 33611b66fc37d127e0138720ceae2adf2cd604dd
 SHA256: abdc94dd98657404f1b8b14db14dc750ac5e40348735d7e7af37046785212a88
 Homepage: https://www.freetype.org
 Description: Static libraries for freetype
+
+Package: fzf
+Version: 0.72.0
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 5116
+Depends: bash, findutils, ncurses-utils
+Suggests: tmux
+Filename: pool/clandro-pkg/fzf_0.72.0_aarch64.deb
+Size: 1377776
+MD5sum: fe84e9021967146bf39bb41cb33f98a5
+SHA1: 94a8f6b98c13b69a3052928a382c8667566fb01b
+SHA256: a3575c603f3efaf5922f7adac00d467f27b155d9d60ad90cd24961201dd4d0a3
+Homepage: https://junegunn.github.io/fzf/
+Description: Command-line fuzzy finder
 
 Package: gawk
 Version: 5.3.2
@@ -1185,6 +1271,34 @@ SHA256: 1877392759d7484b85af54ee72314dedcf9f0cd474941f106da6c82db41dc112
 Homepage: https://selinuxproject.org
 Description: Android fork of libselinux, an SELinux userland library
 
+Package: libandroid-spawn
+Version: 0.3
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 96
+Depends: libc++
+Filename: pool/clandro-pkg/libandroid-spawn_0.3_aarch64.deb
+Size: 16100
+MD5sum: 771b89b9357b483efb5dfbc4bb996d80
+SHA1: 28ad881bc46ec9ea822df23973125b6fea510039
+SHA256: 620d0df09d9e388f05beaf38e9b19969b6d4ac09fdafc22519681de1ad83cb0b
+Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
+Description: Shared library for the posix_spawn system function
+
+Package: libandroid-spawn-static
+Version: 0.3
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 44
+Depends: libandroid-spawn (= 0.3)
+Filename: pool/clandro-pkg/libandroid-spawn-static_0.3_aarch64.deb
+Size: 4020
+MD5sum: 3269d5c89451e99be14f23e02ef14483
+SHA1: 12a7d254f7fcb75c3eb0dab6a08055c5d50bd747
+SHA256: 52bc1402da17bf663a0a6e025215a97ab78c1efcbaefaabe5123c8c566034f2b
+Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
+Description: Static libraries for libandroid-spawn
+
 Package: libandroid-support
 Version: 29-1
 Architecture: aarch64
@@ -1316,6 +1430,22 @@ SHA256: ec9723605960c45fe4bf48ec89488bf3ff0b1d6bb63821770995cca0393509a0
 Homepage: https://libcxx.llvm.org/
 Description: C++ Standard Library
 
+Package: libcap
+Version: 2.69-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 544
+Depends: attr
+Breaks: libcap-dev
+Replaces: libcap-dev
+Filename: pool/clandro-pkg/libcap_2.69-1_aarch64.deb
+Size: 74356
+MD5sum: 5392f1a98ebf604b51bdcbcd428c8282
+SHA1: 0169266f8191f42cf3c562602b5ef750f4f76dc2
+SHA256: d184b3ded4c0a9fe1503a8f0993900c4371061c09e4a794d6a5da08da0b9862e
+Homepage: https://sites.google.com/site/fullycapable/
+Description: POSIX 1003.1e capabilities
+
 Package: libcap-ng
 Version: 2:0.9.3
 Architecture: aarch64
@@ -1342,6 +1472,20 @@ SHA1: d0bf30dd5aaf489f1a5c267639a19462c010eb7e
 SHA256: 1f055c9a5d402d39a7feb73a980199a7036c7e5c8a8dfea67e21e1296df3a062
 Homepage: https://people.redhat.com/sgrubb/libcap-ng/
 Description: Static libraries for libcap-ng
+
+Package: libcap-static
+Version: 2.69-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 88
+Depends: libcap (= 2.69-1)
+Filename: pool/clandro-pkg/libcap-static_2.69-1_aarch64.deb
+Size: 14968
+MD5sum: 22bfb07d388e8e3bdb5a5edb7e81e06b
+SHA1: f897c9e8d29428c9fd640669bfe74e9575347c06
+SHA256: a6606b14dfbea416df0dd81cf7777ff77c2b8d3ee8b448010d1c38ac0f3469f1
+Homepage: https://sites.google.com/site/fullycapable/
+Description: Static libraries for libcap
 
 Package: libcrypt
 Version: 0.2-6
@@ -2722,6 +2866,19 @@ SHA256: 82387d655a7cc43b10c49de45b1065769211ac38046da8913c9b179c72f7a286
 Homepage: https://lz4.github.io/lz4/
 Description: Fast LZ compression algorithm tool
 
+Package: m4
+Version: 1.4.19-5
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 672
+Filename: pool/clandro-pkg/m4_1.4.19-5_aarch64.deb
+Size: 191524
+MD5sum: dae96d6fecf867fcfd2c5062d20be7ab
+SHA1: 58987ed91c69ce82ca021fbfe1d2f92628d4303c
+SHA256: d5579781aac347833d5522df7f610ca939cb088ee67a25ad553e2c4f379a8228
+Homepage: https://www.gnu.org/software/m4/m4.html
+Description: Traditional Unix macro processor
+
 Package: make
 Version: 4.4.1-1
 Architecture: aarch64
@@ -2737,6 +2894,23 @@ SHA1: 5f8026684773f6ba3c58054f388f6e51985b075a
 SHA256: 81eb5482a47057763fbf3c25a70edf1e186304c67f359c1d1e7f9e04776294ff
 Homepage: https://www.gnu.org/software/make/
 Description: Tool to control the generation of non-source files from source files
+
+Package: mandoc
+Version: 1.14.6-6
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev> & @clandro
+Installed-Size: 904
+Depends: less, libandroid-glob, zlib
+Breaks: man
+Replaces: man
+Provides: man
+Filename: pool/clandro-pkg/mandoc_1.14.6-6_aarch64.deb
+Size: 277084
+MD5sum: f302a0dee714efbfb36f2ab2b8da2c17
+SHA1: 712489615355688aa36730977fa3c42220cc7ece
+SHA256: 6039178893dc4e605f288739163e02786030a48690daaadbf6d645864f8d7def
+Homepage: https://mdocml.bsd.lv/
+Description: Man page viewer from the mandoc toolset
 
 Package: mount-utils
 Version: 2.41.3
@@ -3321,6 +3495,21 @@ SHA1: 3e24da171582b8df37fe2307a1384eb5820e915a
 SHA256: 7c269e0d678304463fe7fc047837167368493d4e54d1a92e1ac9b3ca896e8f9b
 Homepage: https://man7.org/linux/man-pages/man5/resolv.conf.5.html
 Description: Resolver configuration file
+
+Package: ripgrep
+Version: 15.1.0-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 4796
+Depends: pcre2
+Recommends: brotli, lz4
+Filename: pool/clandro-pkg/ripgrep_15.1.0-1_aarch64.deb
+Size: 1201664
+MD5sum: 47e5568dba0037a4f9c8ead90279c50a
+SHA1: 3e31eb1b3c25480d508e5fd992c2137968057349
+SHA256: 1be69b9af1729074590461999e3ceb90ee0c52a27d85a86619d4efebfa70583a
+Homepage: https://github.com/BurntSushi/ripgrep
+Description: Search tool like grep and The Silver Searcher
 
 Package: rsync
 Version: 3.4.2
@@ -3959,6 +4148,21 @@ SHA1: 30c0320fde2d90e1c7a5097550032e3fae6c734d
 SHA256: a845399b31126addb5ea8659e6b5e7fe72fef64c988f9995b2f66466c86aa4c7
 Homepage: https://www.zlib.net/
 Description: Static libraries for zlib
+
+Package: zsh
+Version: 5.9-9
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev> & @clandro
+Installed-Size: 9672
+Depends: libandroid-support, libcap, ncurses, clandro-tools
+Recommends: command-not-found, zsh-completions
+Filename: pool/clandro-pkg/zsh_5.9-9_aarch64.deb
+Size: 2037844
+MD5sum: 12ed497738d75fbfdbf5c1e58b9eadde
+SHA1: 48231ed2c65d1a71a62230cc8d2ce5f62c366176
+SHA256: e7021a84d6d1f67880bb66e73d38629f3cacd3913ae19b5d02b5b4d4124d5d41
+Homepage: https://www.zsh.org
+Description: Shell with lots of features
 
 Package: zstd
 Version: 1.5.7-1
