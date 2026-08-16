@@ -457,6 +457,35 @@ SHA256: 34ef4031fa560a356047f2329328bc80a3901de9c7d51130037ef3ae8f9d63c6
 Homepage: https://clandro.dev/
 Description: Basic system tools for Termux
 
+Package: cmake
+Version: 4.3.2-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 53800
+Depends: libarchive, libc++, libcurl, libexpat, jsoncpp, libuv, rhash, zlib
+Recommends: clang, make
+Filename: pool/clandro-pkg/cmake_4.3.2-1_aarch64.deb
+Size: 10161520
+MD5sum: d5ee7d47622dfb44cdfc7623b4fe2faf
+SHA1: dab74df99df61c5f914a3543dfe275e899541d69
+SHA256: bdf6c633f36203b284c7dfaa3112af274d8e0f81dadfeca033fe40c2bf0606cf
+Homepage: https://cmake.org/
+Description: Family of tools designed to build, test and package software
+
+Package: cmake-curses-gui
+Version: 4.3.2-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 9084
+Depends: ncurses-ui-libs, cmake (= 4.3.2-1)
+Filename: pool/clandro-pkg/cmake-curses-gui_4.3.2-1_aarch64.deb
+Size: 2387884
+MD5sum: a6f87bea4bec5960a8ecd6ab142bc554
+SHA1: 3b9a551b67866bc90d6cba34e189069e5ce47ff8
+SHA256: 2d9bbc8e1aeac5faa429b1b94c0bd34eecc5031c688f47991d08056bf7268fc8
+Homepage: https://cmake.org/
+Description: Curses based user interface for CMake (ccmake)
+
 Package: coreutils
 Version: 9.11
 Architecture: aarch64
@@ -1002,6 +1031,36 @@ SHA256: 5270d04b64af52352bee5f16596f80f85107a50a2f2acbba6581dc0c6c76ba96
 Homepage: https://git-scm.com/
 Description: Convert between Git and Subversion repositories
 
+Package: glib
+Version: 2.88.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 20884
+Depends: libandroid-support, libffi, libiconv, pcre2, resolv-conf, zlib, python
+Breaks: glib-dev, glib-bin
+Replaces: glib-dev, glib-bin
+Filename: pool/clandro-pkg/glib_2.88.1_aarch64.deb
+Size: 2559792
+MD5sum: f1bb1cfbc16cd1241cb4f1657e4cddc7
+SHA1: b9859e1e34747f17171f83b2167b5a0c474dec07
+SHA256: f94efeeb528a8bbb965db37839195b151f09f69904c523d2701564e0a1a43b18
+Homepage: https://developer.gnome.org/glib/
+Description: Library providing core building blocks for libraries and applications written in C
+
+Package: glib-cross
+Version: 2.88.1
+Architecture: all
+Maintainer: @clandro
+Installed-Size: 82712
+Depends: glib (= 2.88.1)
+Filename: pool/clandro-pkg/glib-cross_2.88.1_all.deb
+Size: 12170796
+MD5sum: 9eab335dced10741b11c652de4820950
+SHA1: 0f13e26ed193f0146700abe404d224c46c45c50c
+SHA256: 163268ea2ddafda5d108157465a094f17a4b71e5edc57c5cc9319eb1606a81d8
+Homepage: https://developer.gnome.org/glib/
+Description: glib for host (NOT for Termux)
+
 Package: gnupg
 Version: 2.5.17
 Architecture: aarch64
@@ -1121,6 +1180,36 @@ SHA256: 15d1613e61ed7eacef06807c92ed98b1cc6fd8aefe144cdeb18fa15bb6f96784
 Homepage: http://site.icu-project.org/home
 Description: Development utilities for International Components for Unicode
 
+Package: iperf3
+Version: 3.20
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 300
+Depends: openssl
+Breaks: iperf3-dev
+Replaces: iperf3-dev
+Filename: pool/clandro-pkg/iperf3_3.20_aarch64.deb
+Size: 81264
+MD5sum: 9037d7d82e0e55c5ef77e80c594e73c7
+SHA1: 741204a3d672f849271f6f0ea52da07ba970dd7f
+SHA256: 346ce4c114d5c593ccbed4f164885fb33cd4b00c25dc331f5cf8915ce12b1b0d
+Homepage: https://github.com/esnet/iperf
+Description: TCP, UDP, and SCTP network bandwidth measurement tool
+
+Package: iperf3-static
+Version: 3.20
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 336
+Depends: iperf3 (= 3.20)
+Filename: pool/clandro-pkg/iperf3-static_3.20_aarch64.deb
+Size: 69464
+MD5sum: fb0fdf4d589949e12c613c77a71901c7
+SHA1: 6790d28db47067f79a0b7378c72c39ee8e82e42e
+SHA256: 64733f7b84ffc2494e5da0455511b9b235d8c96123d7bed08b86846b46b5fd8c
+Homepage: https://github.com/esnet/iperf
+Description: Static libraries for iperf3
+
 Package: jq
 Version: 1.8.1-1
 Architecture: aarch64
@@ -1179,6 +1268,36 @@ SHA1: 41299de23a23dbaf6050c93df54521e1364f952c
 SHA256: b11d748077324b70868f156c1750a991ead7402631a983f3d65c0b3b4ebb64ae
 Homepage: https://github.com/json-c/json-c/wiki
 Description: Static libraries for json-c
+
+Package: jsoncpp
+Version: 1.9.7
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 448
+Depends: libc++
+Breaks: jsoncpp-dev
+Replaces: jsoncpp-dev
+Filename: pool/clandro-pkg/jsoncpp_1.9.7_aarch64.deb
+Size: 95112
+MD5sum: b0d2ed1291ce2954e2328567f5dec8c4
+SHA1: 5b031fca7dfe52fdc2db33b1bacbbb4f814ab6a8
+SHA256: f5f8e9d4e4968402604aaa1722a6d76a3c7ac4327a027c913cd892b84b2e2698
+Homepage: https://github.com/open-source-parsers/jsoncpp
+Description: C++ library for interacting with JSON
+
+Package: jsoncpp-static
+Version: 1.9.7
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 468
+Depends: jsoncpp (= 1.9.7)
+Filename: pool/clandro-pkg/jsoncpp-static_1.9.7_aarch64.deb
+Size: 72332
+MD5sum: 58b7bde9e913ede005e7f22070116076
+SHA1: 9a4209375a4c92e0f88b3653f9a097842c716626
+SHA256: 9b525b17c1140e9a5a7e1f8abf5d7cc1ba27f7016109cff55ad39a93047a80a8
+Homepage: https://github.com/open-source-parsers/jsoncpp
+Description: Static libraries for jsoncpp
 
 Package: krb5
 Version: 1.22.2
@@ -2803,10 +2922,10 @@ Installed-Size: 352
 Breaks: libuv-dev
 Replaces: libuv-dev
 Filename: pool/clandro-pkg/libuv_1.52.1_aarch64.deb
-Size: 81980
-MD5sum: 3e7c1e77b511acf49cd9ae12fe021293
-SHA1: c78ec690531aab2b192c673f8fc1613b7ca23209
-SHA256: fc1982461b882a4af51f97a77a7f91644bdd3a238938b97cde5cc4952cbee886
+Size: 81904
+MD5sum: 85333655a374d8e88bd98bc8caad7dda
+SHA1: 898be61c42f80121958659e2e5a2d7db8f9b2125
+SHA256: 39f471897ada59bdabcf8da97fafe3236906d3e0855e3e8a77b1c36d1e2d014e
 Homepage: https://libuv.org
 Description: Support library with a focus on asynchronous I/O
 
@@ -2817,10 +2936,10 @@ Maintainer: @clandro
 Installed-Size: 1572
 Depends: libuv (= 1.52.1)
 Filename: pool/clandro-pkg/libuv-static_1.52.1_aarch64.deb
-Size: 287140
-MD5sum: b5d73a55a2921610370a28fc163d3197
-SHA1: 06dc96ef4bfd0a3eb137a8a2744dd099b1822ead
-SHA256: 54c8afe5504339d82515ad4cb68a8ef88bafb77329a5e3bdd22e94beba60f4de
+Size: 287072
+MD5sum: 99a779fb2d79a1655248fc39a30ff9ae
+SHA1: 22bbe32deccabf7537394da2646dc331d6a2aea5
+SHA256: fe2af82a2feff123bf121681f2b73a433568699cc7fa4f4cd4c23418bf446841
 Homepage: https://libuv.org
 Description: Static libraries for libuv
 
@@ -3359,6 +3478,34 @@ SHA256: 7ccd9fba2c40f3d285c18b785766439975a1032fac932054448803ac2b7de70d
 Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Description: Low level cryptographic tools
 
+Package: nginx
+Version: 1.30.0
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 1580
+Depends: libandroid-glob, libcrypt, pcre2, openssl, zlib
+Filename: pool/clandro-pkg/nginx_1.30.0_aarch64.deb
+Size: 434864
+MD5sum: 7412f4f4f7ae14b9cc1006bd948c05ef
+SHA1: 81c3dbb281fab392f1b6392640199e2a21d19ede
+SHA256: 165ac15dec3c7034d35b2b8b16bf0e0c88007a2083f51bf73338cabf618a7b46
+Homepage: https://www.nginx.org
+Description: Lightweight HTTP server
+
+Package: ninja
+Version: 1.13.2
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 312
+Depends: libandroid-spawn, libc++
+Filename: pool/clandro-pkg/ninja_1.13.2_aarch64.deb
+Size: 84184
+MD5sum: 81918b6d4b1f9f6d2b5b4023869108aa
+SHA1: 149f744f769bcf98e302000b248c16c194428796
+SHA256: fc3e91ac9060cf6aa48d9cd45e784f61ad8ccfa53fb990511a00e6baaf388422
+Homepage: https://ninja-build.org
+Description: A small build system with a focus on speed
+
 Package: nmap
 Version: 7.99
 Architecture: aarch64
@@ -3599,6 +3746,20 @@ SHA256: aa63e72577402a20086436a646c0b0906fc714843b844b886dba753547deb6a5
 Homepage: https://www.gnupg.org/related_software/pinentry/index.html
 Description: Dialog allowing secure password entry
 
+Package: pkg-config
+Version: 0.29.2-3
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 140
+Depends: glib
+Filename: pool/clandro-pkg/pkg-config_0.29.2-3_aarch64.deb
+Size: 32744
+MD5sum: 3a4e73a88bc1a971122d95002044b021
+SHA1: 5cda6b62bafbf1c6e13ab1815d4488f0c5dbb376
+SHA256: 95f9e0d01feb0d22718722dc099be5cd7f9c8de4b912daf6a41daf41058dbd3c
+Homepage: https://www.freedesktop.org/wiki/Software/pkg-config/
+Description: Helper tool used when compiling applications and libraries
+
 Package: procps
 Version: 3.3.17-6
 Architecture: aarch64
@@ -3829,6 +3990,23 @@ SHA256: c1024f71c2d4d0d909bdf442228523e60fd3ef9d4e8b384f1c66375d62082758
 Homepage: https://tiswww.case.edu/php/chet/readline/rltop.html
 Description: Static libraries for readline
 
+Package: redis
+Version: 1:8.6.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 3472
+Depends: libandroid-execinfo, libandroid-glob
+Conflicts: valkey
+Breaks: valkey
+Replaces: valkey
+Filename: pool/clandro-pkg/redis_1:8.6.1_aarch64.deb
+Size: 1005808
+MD5sum: b49505090d853dbd8e8d7abeb48b9ec4
+SHA1: 2a3e2615c4eae188e812c3bad92ebf470098df59
+SHA256: 6cf16783faacad460912f5b11da25d856ce2f03c4ea1c7dc37bfe089ac67035a
+Homepage: https://redis.io/
+Description: In-memory data structure store used as a database, cache and message broker
+
 Package: resolv-conf
 Version: 1.3
 Architecture: aarch64
@@ -3841,6 +4019,36 @@ SHA1: 3e24da171582b8df37fe2307a1384eb5820e915a
 SHA256: 7c269e0d678304463fe7fc047837167368493d4e54d1a92e1ac9b3ca896e8f9b
 Homepage: https://man7.org/linux/man-pages/man5/resolv.conf.5.html
 Description: Resolver configuration file
+
+Package: rhash
+Version: 1.4.6-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 384
+Depends: openssl
+Conflicts: librhash, rhash-dev
+Replaces: librhash, rhash-dev
+Filename: pool/clandro-pkg/rhash_1.4.6-1_aarch64.deb
+Size: 162368
+MD5sum: ca20a8d1a64f06237a8696abef6c0e5e
+SHA1: 6947a4b8b2f54e67b3f47672c23a618e169f3b87
+SHA256: 2b0c72f862506852c8842ea6834a19896605052453ceb19d926fff13d4431a9e
+Homepage: https://github.com/rhash/RHash
+Description: Console utility for calculation and verification of magnet links and a wide range of hash sums
+
+Package: rhash-static
+Version: 1.4.6-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 352
+Depends: rhash (= 1.4.6-1)
+Filename: pool/clandro-pkg/rhash-static_1.4.6-1_aarch64.deb
+Size: 130808
+MD5sum: 25ad36d2236b4eb1ebc8f09127f93390
+SHA1: a929ac2caea866d10c04aab52a5f91bd089bea9a
+SHA256: 12ba0bba55884e4cd1eafe68c2fa8871a52d9b3612553c4e5c41ac17127394d2
+Homepage: https://github.com/rhash/RHash
+Description: Static libraries for rhash
 
 Package: ripgrep
 Version: 15.1.0-1
@@ -4120,6 +4328,20 @@ SHA1: 24d9c9fe5dfaa2d157e40ea200f68d9957b98a3c
 SHA256: 386dbf781ad6eb66951cf940fd91fe203842a3ad38b45dc140039e1576e9d41b
 Homepage: https://www.tcl.tk/
 Description: Powerful but easy to learn dynamic programming language
+
+Package: tcpdump
+Version: 4.99.4-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 1148
+Depends: libcap-ng, libpcap, openssl
+Filename: pool/clandro-pkg/tcpdump_4.99.4-1_aarch64.deb
+Size: 345372
+MD5sum: c1d4955c77b227f140f1ce33264ec71f
+SHA1: 8a045a2134a09d9a434ebc4bd4d574d71ecd9998
+SHA256: 39de43a4c699f75d38af1d60c50788b9429fcdbca557b07e7633969a3cb8d003
+Homepage: https://www.tcpdump.org/
+Description: A powerful command-line packet analyzer
 
 Package: tk
 Version: 8.6.14-1
